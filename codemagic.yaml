@@ -1,0 +1,37 @@
+workflows:
+  web-workflow:
+    name: Flutter Web
+    instance_type: linux
+    max_build_duration: 60
+    environment:
+      flutter: stable
+      xcode: latest
+      cocoapods: default
+    cache:
+      cache_paths:
+        - $FLUTTER_ROOT/.pub-cache
+        - $HOME/.pub-cache
+        - $HOME/.gradle/caches
+    triggering:
+      events:
+        - push
+      branch_patterns:
+        - pattern: 'main'
+          include: true
+          source: true
+    scripts:
+      - name: Get Flutter packages
+        script: |
+          flutter pub get
+      - name: Flutter analyze
+        script: |
+          flutter analyze
+      - name: Build Web
+        script: |
+          flutter build web --release --web-renderer canvaskit --dart-define=FLUTTER_WEB_USE_SKIA=true --target=lib/main_admin_web.dart
+    artifacts:
+      - build/web/**
+    publishing:
+      email:
+        recipients:
+          - email@example.com # Replace with your email

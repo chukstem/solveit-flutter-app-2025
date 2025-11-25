@@ -1,0 +1,9 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.solveit.app",
+    "sha256_cert_fingerprints":
+    ["7D:DA:44:D8:5A:47:BB:78:3A:F6:72:37:DC:74:2B:99:7E:FC:BF:32:6C:82:9D:5F:77:4E:D8:B1:90:32:79:A6"]
+  }
+}]

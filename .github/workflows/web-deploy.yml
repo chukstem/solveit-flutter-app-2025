@@ -1,0 +1,34 @@
+# name: Deploy Web App
+# on:
+#   push:
+#     branches: [ main ]
+#   workflow_dispatch:
+
+# jobs:
+#   build-and-deploy:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - uses: actions/checkout@v3
+      
+#       - name: Setup Flutter
+#         uses: subosito/flutter-action@v2
+#         with:
+#           flutter-version: '3.16.0'
+#           channel: 'stable'
+          
+#       - name: Get dependencies
+#         run: flutter pub get
+        
+#       - name: Analyze project
+#         run: flutter analyze
+        
+#       - name: Build web
+#         run: flutter build web --release --web-renderer canvaskit --dart-define=FLUTTER_WEB_USE_SKIA=true --target=lib/main_admin_web.dart
+        
+#       - name: Deploy to GitHub Pages
+#         uses: peaceiris/actions-gh-pages@v3
+#         with:
+#           github_token: ${{ secrets.GITHUB_TOKEN }}
+#           publish_dir: ./build/web
+#           cname: admin.yourdomain.com

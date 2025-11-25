@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+  <title>Solveit Admin</title>  <!-- <--- THIS IS THE LINE TO CHANGE -->
+  <link rel="manifest" href="manifest.json">
+  <base href="$FLUTTER_BASE_HREF">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <!-- *** Updated Description from your old file *** -->
+  <meta name="description" content="Solveit Admin Dashboard">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <!-- *** Updated App Title from your old file *** -->
+  <meta name="apple-mobile-web-app-title" content="Solveit Admin">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <!-- *** Updated Title from your old file *** -->
+  <title>Solveit Admin</title>
+  <link rel="manifest" href="manifest.json">
+
+  <!-- *** START: Custom PDF.js files from your old file *** -->
+  <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@2.12.313/build/pdf.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdn.jsdelivr.net/npm/pdfjs-dist@2.12.313/build/pdf.worker.js";
+    pdfRenderOptions = {
+      cMapUrl: 'https://cdn.jsdelivr.net/npm/pdfjs-dist@2.12.313/cmaps/',
+      cMapPacked: true,
+    }
+  </script>
+  <!-- *** END: Custom PDF.js files *** -->
+
+  <!--
+    The modern Flutter web bootstrap script does not require the manual service worker
+    registration script block or the old flutter.js script tag.
+    Those have been removed.
+  -->
+
+</head>
+<body>
+
+  <!-- *** START: Custom Loading indicator from your old file *** -->
+  <div id="loading">
+    <style>
+      body {
+        /* Consider removing 'position: fixed;' if it causes issues with scrolling before Flutter loads */
+        inset: 0;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        position: fixed;
+      }
+      #loading {
+        align-items: center;
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        width: 100%;
+        background: #ffffff; /* Or your preferred loading background */
+      }
+      .loader {
+        width: 48px;
+        height: 48px;
+        border: 5px solid #4285F4; /* Or your brand color */
+        border-bottom-color: transparent;
+        border-radius: 50%;
+        display: inline-block;
+        box-sizing: border-box;
+        animation: rotation 1s linear infinite;
+      }
+      @keyframes rotation {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+    <span class="loader"></span>
+  </div>
+  <!-- *** END: Custom Loading indicator *** -->
+
+  <!--
+    This script (`flutter_bootstrap.js`) handles loading the Flutter engine,
+    service worker registration, and initializing your app.
+    It replaces the old `flutter.js`, `loadEntrypoint` call, and manual
+    service worker registration.
+  -->
+  <script src="flutter_bootstrap.js" async></script>
+
+</body>
+</html>

@@ -1,0 +1,4 @@
+[10-Oct-2025 13:14:37 UTC] PHP Fatal error:  Trait "App\Http\Traits\ApiResponse" not found in /home/solveit/backend.solve-it.com.ng/app/Http/Controllers/NotificationController.php on line 8
+[10-Oct-2025 16:34:34 UTC] PHP Fatal error:  Trait "App\Http\Traits\ApiResponse" not found in /home/solveit/backend.solve-it.com.ng/app/Http/Controllers/NotificationController.php on line 8
+[10-Oct-2025 16:35:52 UTC] PHP Fatal error:  Trait "App\Http\Traits\ApiResponse" not found in /home/solveit/backend.solve-it.com.ng/app/Http/Controllers/NotificationController.php on line 8
+[10-Oct-2025 16:35:56 UTC] PHP Fatal error:  Trait "App\Http\Traits\ApiResponse" not found in /home/solveit/backend.solve-it.com.ng/app/Http/Controllers/NotificationController.php on line 8

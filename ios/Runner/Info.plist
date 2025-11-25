@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>CADisableMinimumFrameDurationOnPhone</key>
+		<true/>
+		<key>CFBundleDevelopmentRegion</key>
+		<string>$(DEVELOPMENT_LANGUAGE)</string>
+		<key>CFBundleDisplayName</key>
+		<string>${APP_NAME}</string>
+		<key>CFBundleExecutable</key>
+		<string>$(EXECUTABLE_NAME)</string>
+		<key>CFBundleIdentifier</key>
+		<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+		<key>CFBundleInfoDictionaryVersion</key>
+		<string>6.0</string>
+		<key>CFBundleName</key>
+		<string>${BUNDLE_NAME}</string>
+		<key>CFBundlePackageType</key>
+		<string>APPL</string>
+		<key>CFBundleShortVersionString</key>
+		<string>$(FLUTTER_BUILD_NAME)</string>
+		<key>CFBundleSignature</key>
+		<string>????</string>
+		<key>CFBundleURLTypes</key>
+		<array>
+			<dict>
+				<key>CFBundleTypeRole</key>
+				<string>Editor</string>
+				<key>CFBundleURLSchemes</key>
+				<array>
+					<string>com.googleusercontent.apps.861823949799-vc35cprkp249096uujjn0vvnmcvjppkn</string>
+				</array>
+			</dict>
+		</array>
+		<key>CFBundleVersion</key>
+		<string>$(FLUTTER_BUILD_NUMBER)</string>
+		<key>GIDClientID</key>
+		<string>185164129893-rjcac9q49uafp436u10mf5e5he1mvm0b.apps.googleusercontent.com</string>
+		<key>LSRequiresIPhoneOS</key>
+		<true/>
+		<key>LSSupportsOpeningDocumentsInPlace</key>
+		<false/>
+		<key>MKDirectionsApplicationSupportedModes</key>
+		<array>
+			<string>MKDirectionsModeBike</string>
+			<string>MKDirectionsModeBus</string>
+			<string>MKDirectionsModeCar</string>
+			<string>MKDirectionsModeFerry</string>
+			<string>MKDirectionsModePedestrian</string>
+			<string>MKDirectionsModeStreetCar</string>
+			<string>MKDirectionsModeTaxi</string>
+			<string>MKDirectionsModeTrain</string>
+		</array>
+		<key>NSMicrophoneUsageDescription</key>
+		<string>We need to access your microphone to allow you to record audio directly within the app</string>
+		<key>NSAppleMusicUsageDescription</key>
+		<string>We need access to your music library to allow you to play songs directly within the app.</string>
+		<key>NSCameraUsageDescription</key>
+		<string>We need access to your camera to take photos for your profile and to upload KYC details.</string>
+		<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+		<string>We need access to your location to provide location-based services and improve app functionality. For example,providing personalized menus or showing location of a chef while a booking is in progress</string>
+		<key>NSLocationAlwaysUsageDescription</key>
+		<string>We need to always know your location to provide continuous location-based services, such as knowing your location for giving real time updates to the host and providing personalised menus</string>
+		<key>NSLocationUsageDescription</key>
+		<string>We need access to your location to provide location-based services on older devices.</string>
+		<key>NSLocationWhenInUseUsageDescription</key>
+		<string>We need access to your location while the app is in use to show real time location to a host so he is always aware where the chef he booked with is</string>
+		<key>NSPhotoLibraryUsageDescription</key>
+		<string>We need access to your photo library to allow you to upload photos to your profile within the app.</string>
+		<key>NSPrivacyAccessedAPITypes</key>
+		<array>
+			<dict>
+				<key>NSPrivacyAccessedAPICategoryUserDefaults</key>
+				<string>We use user defaults to save your preferences and enhance your app experience.</string>
+			</dict>
+			<dict>
+				<key>NSPrivacyAccessedAPICategoryFileTimestamp</key>
+				<string>We access file timestamps to provide timely updates and cache management.</string>
+			</dict>
+			<dict>
+				<key>NSPrivacyAccessedAPICategoryDiskSpace</key>
+				<string>We check disk space to ensure your device has sufficient storage for optimal app performance.</string>
+			</dict>
+			<dict>
+				<key>NSPrivacyAccessedAPICategorySystemBootTime</key>
+				<string>We access system boot time to optimize our services based on your device's uptime.</string>
+			</dict>
+		</array>
+		<key>UIApplicationSupportsIndirectInputEvents</key>
+		<true/>
+		<key>UILaunchStoryboardName</key>
+		<string>LaunchScreen</string>
+		<key>UIMainStoryboardFile</key>
+		<string>Main</string>
+		<key>UISupportedInterfaceOrientations</key>
+		<array>
+			<string>UIInterfaceOrientationPortrait</string>
+			<string>UIInterfaceOrientationLandscapeLeft</string>
+			<string>UIInterfaceOrientationLandscapeRight</string>
+		</array>
+		<key>UISupportedInterfaceOrientations~ipad</key>
+		<array>
+			<string>UIInterfaceOrientationPortrait</string>
+			<string>UIInterfaceOrientationPortraitUpsideDown</string>
+			<string>UIInterfaceOrientationLandscapeLeft</string>
+			<string>UIInterfaceOrientationLandscapeRight</string>
+		</array>
+		<key>UIStatusBarHidden</key>
+		<true/>
+		<key>UIViewControllerBasedStatusBarAppearance</key>
+		<false/>
+	</dict>
+</plist>

@@ -1,0 +1,92 @@
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.build/
+.buildlog/
+.history
+.svn/
+.swiftpm/
+migrate_working_dir/
+
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# The .vscode folder contains launch configuration and tasks you configure in
+# VS Code which you may wish to be included in version control, so this line
+# is commented out by default.
+#.vscode/
+
+# Flutter/Dart/Pub related
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+/build/
+
+# Symbolication related
+app.*.symbols
+
+# Obfuscation related
+app.*.map.json
+
+# Android Studio will place build artifacts here
+/android/app/debug
+/android/app/profile
+/android/app/release
+
+# Sensitive configuration files
+**/google-services.json
+**/GoogleService-Info.plist
+**/*firebase*.json
+**/.env
+**/.env.*
+
+# Laravel specific
+laravel-backend/vendor/
+laravel-backend/storage/app/public/firebase.json
+laravel-backend/public/storage/firebase.json
+laravel-backend/storage/logs/
+laravel-backend/storage/framework/cache/
+laravel-backend/storage/framework/sessions/
+laravel-backend/storage/framework/views/
+laravel-backend/bootstrap/cache/*.php
+laravel-backend/.env
+laravel-backend/.env.*
+
+# Node modules (if any)
+node_modules/
+
+# IDE
+.vscode/
+.idea/
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Temporary setup scripts (keep main ones, exclude temp)
+check_*.ps1
+complete_android_setup.ps1
+install_flutter.ps1
+install_flutter_auto.ps1
+install_android_sdk.ps1
+install_java.ps1
+install_sdk_packages.ps1
+build_apk_with_flutter.ps1
+
+# Setup documentation (keep README, exclude setup-specific docs)
+INSTALL_FLUTTER.md
+INSTALL_ANDROID_SDK.md
+QUICK_INSTALL.md
+SETUP_STATUS.md
+BUILD_APK.md
