@@ -1,4 +1,4 @@
-const _baseUrl = "https://solve-it-backend-v2.onrender.com/api/v1/";
+const _baseUrl = "https://backend.solve-it.com.ng/api/v1/";
 
 extension BaseUrlExtension on String {
   String get base => '$_baseUrl$this';
@@ -57,9 +57,6 @@ class _MarketPlaceEndpoints {
   final updateProductCommentReaction = "market-place/updateProductCommentReaction".base;
 }
 
-class _GeneralEndpoints {
-  String retrieveFile(String file) => "uploads/$file".base;
-}
 
 class _AuthEndpoints {
   final signUpUser = "auth/register".base;
@@ -287,9 +284,10 @@ class _NotificationEndpoints {
   final deleteAllNotifications = "notifications/".base;
 }
 
-// General Endpoints (update existing)
+// General Endpoints
 class _GeneralEndpoints {
-  String retrieveFile(String file) => "general/retrieveFile/$file".base;
+  String retrieveFile(String file) => "uploads/$file".base;
+  String retrieveFileGeneral(String file) => "general/retrieveFile/$file".base;
   final getAllStates = "general/getAllStates".base;
   final getAllCities = "general/getAllCityInStates".base;
   final getStats = "general/stats".base;

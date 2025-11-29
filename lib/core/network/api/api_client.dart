@@ -29,7 +29,8 @@ class ApiClient {
   final NetworkInfo networkInfo;
   late final Dio _dio; // Ensures _dio is always initialized
 
-  static String baseUrl = appBaseUrl;
+  // Base URL is kept for fallback, but endpoints from network_routes.dart already have full URLs
+  static String baseUrl = "https://backend.solve-it.com.ng/api/v1/";
 
   /// **Setup Dio Interceptors (for token handling & logging)**
   void _setupInterceptors() {

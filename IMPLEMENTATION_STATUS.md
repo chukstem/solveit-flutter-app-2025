@@ -152,7 +152,7 @@
 
 ## Notes
 
-- Base URL: `https://solve-it-backend-v2.onrender.com/api/v1/`
+- Base URL: `https://backend.solve-it.com.ng/api/v1/`
 - All endpoints require authentication except: login, register, verify-email, resend-code, forgot-password, reset-password
 - Authentication is done via Bearer token in Authorization header
 - The backend uses Laravel Sanctum for authentication

@@ -22,7 +22,7 @@ const kNotFoundError = 'An error occured, please try again.';
 const kRequestCancelledError = 'Request to server was cancelled.';
 const unknownErrorString = 'An unknow error has occured, try again later';
 
-const appBaseUrl = "https://collins-backend-dev.onrender.com/";
+const appBaseUrl = "https://backend.solve-it.com.ng/api/v1/";
 
 // final List<SinglePostComments> singlePostComments = [
 //   SinglePostComments(
