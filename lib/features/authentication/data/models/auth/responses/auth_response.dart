@@ -93,11 +93,20 @@ class LoginResponse {
   }
 
   factory LoginResponse.fromMap(Map<String, dynamic> map) {
+    // Backend wraps data in a 'data' object: {status: 200, message: "...", data: {user: {...}, access_token: "..."}}
+    final data = map['data'] as Map<String, dynamic>?;
+    
+    // Extract user data - backend returns it in data.user
+    final userMap = data?['user'] as Map<String, dynamic>? ?? map['userData'] as Map<String, dynamic>?;
+    if (userMap == null) {
+      throw FormatException('User data not found in response');
+    }
+    
     return LoginResponse(
-      status: map['status'] as int,
-      message: map['message'] as String,
-      token: map['token'] != null ? map['token'] as String : null,
-      userData: UserData.fromMap(map['userData'] as Map<String, dynamic>),
+      status: map['status'] is int ? map['status'] as int : (int.tryParse(map['status']?.toString() ?? '200') ?? 200),
+      message: map['message']?.toString() ?? '',
+      token: data?['access_token']?.toString() ?? map['token']?.toString(),
+      userData: UserData.fromMap(userMap),
     );
   }
 
@@ -206,21 +215,31 @@ class UserData {
   }
 
   factory UserData.fromMap(Map<String, dynamic> map) {
+    // Handle date conversion - backend may return DateTime or string
+    String dobString = '';
+    if (map['dob'] != null) {
+      if (map['dob'] is DateTime) {
+        dobString = (map['dob'] as DateTime).toIso8601String();
+      } else if (map['dob'] is String) {
+        dobString = map['dob'] as String;
+      }
+    }
+    
     return UserData(
-      id: map['id'] ?? '',
-      name: map['name'] ?? '',
-      email: map['email'] ?? '',
-      phone: map['phone'] ?? '',
-      dob: map['dob'] ?? '',
-      gender: map['gender'] ?? '',
-      schoolId: map['school_id'] ?? 0,
-      code: map['code'] ?? '',
-      roleId: map['role_id'] ?? 0,
-      matricNumber: map['matric_number'] ?? '',
-      facultyId: map['faculty_id'] ?? '',
-      departmentId: map['department_id'] ?? '',
-      levelId: map['level_id'] ?? '',
-      userCategory: map['user_category'] ?? '',
+      id: map['id'] is int ? map['id'] as int : (int.tryParse(map['id']?.toString() ?? '0') ?? 0),
+      name: map['name']?.toString() ?? '',
+      email: map['email']?.toString() ?? '',
+      phone: map['phone']?.toString() ?? '',
+      dob: dobString,
+      gender: map['gender']?.toString() ?? '',
+      schoolId: map['school_id'] is int ? map['school_id'] as int : (int.tryParse(map['school_id']?.toString() ?? '0') ?? 0),
+      code: map['code']?.toString() ?? '',
+      roleId: map['role_id'] is int ? map['role_id'] as int : (int.tryParse(map['role_id']?.toString() ?? '0') ?? 0),
+      matricNumber: map['matric_number']?.toString() ?? '',
+      facultyId: map['faculty_id'] is int ? map['faculty_id'] as int : (int.tryParse(map['faculty_id']?.toString() ?? '0') ?? 0),
+      departmentId: map['department_id'] is int ? map['department_id'] as int : (int.tryParse(map['department_id']?.toString() ?? '0') ?? 0),
+      levelId: map['level_id'] is int ? map['level_id'] as int : (int.tryParse(map['level_id']?.toString() ?? '0') ?? 0),
+      userCategory: map['user_category']?.toString() ?? '',
     );
   }
 
